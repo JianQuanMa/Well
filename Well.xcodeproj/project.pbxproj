@@ -15,6 +15,10 @@
 		4EACBA162C10BB2200B46B10 /* WellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACBA152C10BB2200B46B10 /* WellTests.swift */; };
 		4EACBA202C10BB2200B46B10 /* WellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACBA1F2C10BB2200B46B10 /* WellUITests.swift */; };
 		4EACBA222C10BB2200B46B10 /* WellUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACBA212C10BB2200B46B10 /* WellUITestsLaunchTests.swift */; };
+		4EACBA302C10C9F200B46B10 /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACBA2F2C10C9F200B46B10 /* PokemonListView.swift */; };
+		4EACBA322C10CA7200B46B10 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACBA312C10CA7200B46B10 /* HomeScreenViewModel.swift */; };
+		4EACBA342C10CB1000B46B10 /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACBA332C10CB1000B46B10 /* PokemonModel.swift */; };
+		4EACBA362C10CBE900B46B10 /* PokemonsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACBA352C10CBE900B46B10 /* PokemonsClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		4EACBA1B2C10BB2200B46B10 /* WellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EACBA1F2C10BB2200B46B10 /* WellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellUITests.swift; sourceTree = "<group>"; };
 		4EACBA212C10BB2200B46B10 /* WellUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4EACBA2F2C10C9F200B46B10 /* PokemonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListView.swift; sourceTree = "<group>"; };
+		4EACBA312C10CA7200B46B10 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		4EACBA332C10CB1000B46B10 /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
+		4EACBA352C10CBE900B46B10 /* PokemonsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,14 @@
 		4EACB9FD2C10BB2100B46B10 /* Well */ = {
 			isa = PBXGroup;
 			children = (
+				4EACBA2E2C10C9C500B46B10 /* PokemonListView */,
 				4EACB9FE2C10BB2100B46B10 /* AppDelegate.swift */,
 				4EACBA002C10BB2100B46B10 /* SceneDelegate.swift */,
-				4EACBA022C10BB2100B46B10 /* ViewController.swift */,
 				4EACBA072C10BB2200B46B10 /* Assets.xcassets */,
 				4EACBA092C10BB2200B46B10 /* LaunchScreen.storyboard */,
 				4EACBA0C2C10BB2200B46B10 /* Info.plist */,
+				4EACBA352C10CBE900B46B10 /* PokemonsClient.swift */,
+				4EACBA332C10CB1000B46B10 /* PokemonModel.swift */,
 			);
 			path = Well;
 			sourceTree = "<group>";
@@ -122,6 +132,16 @@
 				4EACBA212C10BB2200B46B10 /* WellUITestsLaunchTests.swift */,
 			);
 			path = WellUITests;
+			sourceTree = "<group>";
+		};
+		4EACBA2E2C10C9C500B46B10 /* PokemonListView */ = {
+			isa = PBXGroup;
+			children = (
+				4EACBA022C10BB2100B46B10 /* ViewController.swift */,
+				4EACBA2F2C10C9F200B46B10 /* PokemonListView.swift */,
+				4EACBA312C10CA7200B46B10 /* HomeScreenViewModel.swift */,
+			);
+			path = PokemonListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EACBA302C10C9F200B46B10 /* PokemonListView.swift in Sources */,
+				4EACBA362C10CBE900B46B10 /* PokemonsClient.swift in Sources */,
+				4EACBA342C10CB1000B46B10 /* PokemonModel.swift in Sources */,
 				4EACBA032C10BB2100B46B10 /* ViewController.swift in Sources */,
 				4EACB9FF2C10BB2100B46B10 /* AppDelegate.swift in Sources */,
 				4EACBA012C10BB2100B46B10 /* SceneDelegate.swift in Sources */,
+				4EACBA322C10CA7200B46B10 /* HomeScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
