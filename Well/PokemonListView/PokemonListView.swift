@@ -42,12 +42,10 @@ struct PokemonListView: View {
             }
         }
         .padding()
-        .background(.red)
         .onAppear {
             viewModel.onAppear()
         }
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(.blue)
         .toolbarColorScheme(.dark)
         .navigationTitle(viewModel.title)
     }
@@ -59,11 +57,10 @@ struct PokemonListView: View {
 
                     .resizable()
                     .scaledToFit()
-                
+                    .frame(width: 100)
             } placeholder: {
                 ProgressView()
             }
-            .background(.yellow)
             .frame(width: 48)
             .padding(.trailing, 8)
             
@@ -76,7 +73,6 @@ struct PokemonListView: View {
             .padding(.vertical, 8)
         }
         .listRowInsets(EdgeInsets())
-        .background(.red)
     }
 }
 

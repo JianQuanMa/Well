@@ -17,7 +17,7 @@ class PokemonCellViewTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak private(set) var pokemonImageView: UIImageView! {
         didSet {
-            pokemonImageView.backgroundColor = .green
+//            pokemonImageView.backgroundColor = .green
         }
     }
     
@@ -25,7 +25,6 @@ class PokemonCellViewTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .green
         selectionStyle = .none
     }
     
@@ -40,12 +39,6 @@ class PokemonCellViewTableViewCell: UITableViewCell {
 
         task?.resume()
     }
-//
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//        print("-=- \(Self.self).\(#function)")
-//    }
-    
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -53,17 +46,4 @@ class PokemonCellViewTableViewCell: UITableViewCell {
         self.task = nil
         pokemonImageView.image = nil
     }
-}
-
-private let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-private let lettersLength = UInt32(letters.count)
-func randomString(length: Int) -> String {
-    var result = ""
-
-    for _ in 0..<length {
-        let randomIndex = Int(arc4random_uniform(lettersLength))
-        let randomCharacter = letters[letters.index(letters.startIndex, offsetBy: randomIndex)]
-        result.append(randomCharacter)
-    }
-    return result
 }

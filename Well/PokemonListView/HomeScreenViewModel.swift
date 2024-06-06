@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor
 final class HomeScreenViewModel: ObservableObject {
-    let title = "Pokemon"
+    let title = "Pokémon"
     enum FetchState {
         case idle
         case loading(String)
