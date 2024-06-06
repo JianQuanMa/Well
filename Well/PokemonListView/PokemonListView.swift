@@ -46,7 +46,6 @@ struct PokemonListView: View {
             viewModel.onAppear()
         }
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarColorScheme(.dark)
         .navigationTitle(viewModel.title)
     }
     

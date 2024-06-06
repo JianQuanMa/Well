@@ -15,11 +15,7 @@ class PokemonCellViewTableViewCell: UITableViewCell {
     
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak private(set) var pokemonImageView: UIImageView! {
-        didSet {
-//            pokemonImageView.backgroundColor = .green
-        }
-    }
+    @IBOutlet weak private(set) var pokemonImageView: UIImageView!
     
     private var task: URLSessionDataTask?
 
