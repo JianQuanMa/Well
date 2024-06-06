@@ -11,5 +11,5 @@ struct Pokemon: Identifiable, Decodable, Hashable {
     let id: Int
     let name: String
     let description: String
-    let imageURl: URL
+    let imageUrl: URL
 }

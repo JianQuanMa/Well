@@ -55,3 +55,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+func style(_ navigationController: UINavigationController?) {
+     let appearance = UINavigationBarAppearance()
+     appearance.configureWithOpaqueBackground()
+     appearance.backgroundColor = UIColor.systemPurple
+     
+     navigationController?.navigationBar.standardAppearance = appearance
+     navigationController?.navigationBar.scrollEdgeAppearance = appearance
+
+}
