@@ -70,9 +70,6 @@ final class ViewController: UIViewController {
             self?.tableView.reloadData()
         }
     }
-    deinit {
-        print("-=- \(Self.self) \(self) died")
-    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {

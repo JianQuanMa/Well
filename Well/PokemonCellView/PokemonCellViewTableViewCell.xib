@@ -16,23 +16,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G4l-tL-3Ga">
-                        <rect key="frame" x="0.0" y="154.66666666666666" width="75" height="60"/>
+                        <rect key="frame" x="0.0" y="144.66666666666666" width="81" height="80"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="G4l-tL-3Ga" secondAttribute="height" multiplier="248:201" constant="1" id="GAO-Vz-1H4"/>
-                            <constraint firstAttribute="height" constant="60" id="uqJ-4j-OYt"/>
+                            <constraint firstAttribute="width" secondItem="G4l-tL-3Ga" secondAttribute="height" multiplier="1:1" constant="1" id="GAO-Vz-1H4"/>
+                            <constraint firstAttribute="height" constant="80" id="uqJ-4j-OYt"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LfQ-S1-CMz">
-                        <rect key="frame" x="75" y="16" width="703" height="337"/>
+                        <rect key="frame" x="81" y="16" width="697" height="337"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aw6-pR-MKG">
-                                <rect key="frame" x="0.0" y="0.0" width="703" height="308.66666666666669"/>
+                                <rect key="frame" x="0.0" y="0.0" width="697" height="308.66666666666669"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdt-2i-1kK">
-                                <rect key="frame" x="0.0" y="316.66666666666669" width="703" height="20.333333333333314"/>
+                                <rect key="frame" x="0.0" y="316.66666666666669" width="697" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

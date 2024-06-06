@@ -47,6 +47,7 @@ struct PokemonListView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(viewModel.title)
+        .navigationBarColor(UIColor(hex: "#5856d6"), titleColor: UIColor.black)
     }
     
     private func pokemonCell(pokemon: Pokemon) -> some View {
@@ -56,7 +57,7 @@ struct PokemonListView: View {
 
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 100)
+                    .frame(width: 80)
             } placeholder: {
                 ProgressView()
             }
@@ -65,9 +66,10 @@ struct PokemonListView: View {
             
             VStack(alignment: .leading, spacing: 8) {
                 Text(pokemon.name)
-                    .font(.title)
+                    .font(.body)
+                    .bold()
                 Text(pokemon.description)
-                    .font(.subheadline)
+                    .font(.body)
             }
             .padding(.vertical, 8)
         }
@@ -87,3 +89,50 @@ struct PokemonListView: View {
     }
 }
 
+import SwiftUI
+import UIKit
+
+struct NavigationBarColorModifier: UIViewControllerRepresentable {
+    var backgroundColor: UIColor
+    var titleColor: UIColor
+
+    func makeUIViewController(context: Context) -> UIViewController {
+        let viewController = UIViewController()
+        
+        DispatchQueue.main.async {
+            if let navigationController = viewController.navigationController {
+                let appearance = UINavigationBarAppearance()
+                appearance.configureWithOpaqueBackground()
+                appearance.backgroundColor = backgroundColor
+                appearance.titleTextAttributes = [.foregroundColor: titleColor]
+                appearance.largeTitleTextAttributes = [.foregroundColor: titleColor]
+
+                navigationController.navigationBar.standardAppearance = appearance
+                navigationController.navigationBar.scrollEdgeAppearance = appearance
+            }
+        }
+        
+        return viewController
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        DispatchQueue.main.async {
+            if let navigationController = uiViewController.navigationController {
+                let appearance = UINavigationBarAppearance()
+                appearance.configureWithOpaqueBackground()
+                appearance.backgroundColor = backgroundColor
+                appearance.titleTextAttributes = [.foregroundColor: titleColor]
+                appearance.largeTitleTextAttributes = [.foregroundColor: titleColor]
+
+                navigationController.navigationBar.standardAppearance = appearance
+                navigationController.navigationBar.scrollEdgeAppearance = appearance
+            }
+        }
+    }
+}
+
+extension View {
+    func navigationBarColor(_ backgroundColor: UIColor, titleColor: UIColor = .black) -> some View {
+        self.background(NavigationBarColorModifier(backgroundColor: backgroundColor, titleColor: titleColor))
+    }
+}

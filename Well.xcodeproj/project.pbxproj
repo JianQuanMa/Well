@@ -26,6 +26,7 @@
 		4EACBA432C11442500B46B10 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACBA422C11442500B46B10 /* PokemonDetailView.swift */; };
 		4EACBA462C1144A700B46B10 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACBA452C1144A700B46B10 /* PokemonDetailViewController.swift */; };
 		4EACBA482C1144D400B46B10 /* PokemonDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EACBA472C1144D400B46B10 /* PokemonDetailViewController.xib */; };
+		4EACBA4A2C1157BD00B46B10 /* ContainerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACBA492C1157BD00B46B10 /* ContainerViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		4EACBA422C11442500B46B10 /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		4EACBA452C1144A700B46B10 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
 		4EACBA472C1144D400B46B10 /* PokemonDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonDetailViewController.xib; sourceTree = "<group>"; };
+		4EACBA492C1157BD00B46B10 /* ContainerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				4EACBA152C10BB2200B46B10 /* WellTests.swift */,
+				4EACBA492C1157BD00B46B10 /* ContainerViewControllerTests.swift */,
 			);
 			path = WellTests;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EACBA4A2C1157BD00B46B10 /* ContainerViewControllerTests.swift in Sources */,
 				4EACBA162C10BB2200B46B10 /* WellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

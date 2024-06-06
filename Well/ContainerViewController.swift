@@ -83,18 +83,13 @@ class ContainerViewController: UIViewController {
         cachedUIKitVC = viewController
 
         let navigation = UINavigationController(rootViewController: viewController)
-
-        
         transition(to: navigation)
     }
     
     private func transition(to newViewController: UIViewController) {
-        // Remove current view controller
-//        currentViewController?.willMove(toParent: nil)
         currentViewController?.view.removeFromSuperview()
         currentViewController?.removeFromParent()
         
-        // Add new view controller
         addChild(newViewController)
         view.insertSubview(newViewController.view, at: 0)
         newViewController.view.frame = view.bounds
