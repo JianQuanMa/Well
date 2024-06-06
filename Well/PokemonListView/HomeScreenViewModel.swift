@@ -34,7 +34,12 @@ final class HomeScreenViewModel: ObservableObject {
     
     //swiftUI
     func onAppear() {
-        loadPokemons()
+        switch fetchState {
+        case .loaded(.success), .loading:
+            break
+        default:
+            loadPokemons()
+        }
     }
     
     private func loadPokemons() {

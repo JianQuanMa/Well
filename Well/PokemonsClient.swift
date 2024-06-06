@@ -10,7 +10,7 @@ import Foundation
 struct PokemonsClient {
     let fetch: () async -> Result<[Pokemon], Error>
     
-    static func live(session: URLSession, extraDelay: Duration) -> PokemonsClient {
+    static func live(session: Networking, extraDelay: Duration) -> PokemonsClient {
         PokemonsClient  {
             try? await Task.sleep(for: extraDelay)
             
@@ -21,7 +21,6 @@ struct PokemonsClient {
                     return .failure(URLError(.badURL))
                 }
                 let (data, _) = try await session.data(from: url)
-                print("-=- data: \(data)")
                 return .success(try JSONDecoder().decode([Pokemon].self, from: data))
             } catch {
                 return .failure(error)
@@ -35,4 +34,21 @@ struct PokemonsClient {
             return state
         }
     }
+}
+
+protocol Networking {
+    func data(
+    from url: URL,
+    delegate: URLSessionTaskDelegate?
+    ) async throws -> (Data, URLResponse)
+}
+
+extension URLSession: Networking {
+    
+}
+
+extension Networking {
+    func data(from url: URL) async throws -> (Data, URLResponse) {
+            try await data(from: url, delegate: nil)
+        }
 }

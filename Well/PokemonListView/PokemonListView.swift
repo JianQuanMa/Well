@@ -83,7 +83,7 @@ struct PokemonListView: View {
             viewModel: .init(
                 client:
                     
-                        .live(session: .shared, extraDelay: .zero)
+                        .live(session: URLSession.shared, extraDelay: .zero)
             )
         )
     }

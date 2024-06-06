@@ -55,7 +55,7 @@ class ContainerViewController: UIViewController {
         
         let wrappedSwiftUIView = PokemonListView(
             viewModel: .init(
-                client: .live(session: .shared, extraDelay: .seconds(0))
+                client: .live(session: URLSession.shared, extraDelay: .seconds(0))
             )
         )
         let swiftUIView = NavigationStack {
